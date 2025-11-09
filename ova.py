@@ -226,6 +226,9 @@ class RobloxWindowManager:
         
         if not windows:
             return
+
+        # SORTING CASE-SENSITIVE (otomatis urut: a-z lalu A-Z)
+        windows.sort(key=lambda window: window[1].lower())  # Case-sensitive sorting
         
         title_bar_height = 30
         
